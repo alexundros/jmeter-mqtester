@@ -21,6 +21,34 @@
     <pooled-jms-version>1.2.3</pooled-jms-version>
   </properties>
 
+  <dependencies>
+    <!-- org.apache.jmeter/ApacheJMeter_core -->
+    <dependency>
+      <groupId>org.apache.jmeter</groupId>
+      <artifactId>ApacheJMeter_core</artifactId>
+      <version>${jmeter.version}</version>
+      <scope>provided</scope>
+      <exclusions>
+      </exclusions>
+    </dependency>
+    <!-- org.apache.jmeter/ApacheJMeter_components -->
+    <dependency>
+      <groupId>org.apache.jmeter</groupId>
+      <artifactId>ApacheJMeter_components</artifactId>
+      <version>${jmeter.version}</version>
+      <scope>provided</scope>
+      <exclusions>
+      </exclusions>
+    </dependency>
+    <!-- org.apache.jmeter/ApacheJMeter_java -->
+    <dependency>
+      <groupId>org.apache.jmeter</groupId>
+      <artifactId>ApacheJMeter_java</artifactId>
+      <version>${jmeter.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <profiles>
     <profile>
       <id>package-with-shade</id>
