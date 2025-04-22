@@ -85,7 +85,15 @@
         </plugins>
       </build>
     </profile>
-    
+    <profile>
+      <id>build-to-jmeter-home</id>
+      <properties>
+        <!--suppress UnresolvedMavenProperty -->
+        <outputDir>${env.JMETER_HOME}/lib/ext</outputDir>
+        <!--suppress UnresolvedMavenProperty -->
+        <libDir>${env.JMETER_HOME}/lib</libDir>
+      </properties>
+    </profile>
   </profiles>
 
   <build>
