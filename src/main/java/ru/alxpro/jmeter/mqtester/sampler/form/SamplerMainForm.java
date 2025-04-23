@@ -65,7 +65,6 @@ public class SamplerMainForm extends JFrame {
             TitledBorder.DEFAULT_POSITION, null, null));
     final JPanel headersPanel = new JPanel();
     headersPanel.setLayout(new BorderLayout(0, 0));
-    GridBagConstraints gbc;
     gbc_headersPanel = new GridBagConstraints();
     gbc_headersPanel.gridx = 0;
     gbc_headersPanel.gridy = 0;
