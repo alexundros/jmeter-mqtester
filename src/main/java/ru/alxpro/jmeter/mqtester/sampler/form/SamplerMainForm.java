@@ -1,14 +1,15 @@
 package ru.alxpro.jmeter.mqtester.sampler.form;
 
+import static javax.swing.BorderFactory.createLineBorder;
+import static javax.swing.BorderFactory.createTitledBorder;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -36,10 +37,10 @@ public class SamplerMainForm extends JFrame {
   GridBagConstraints gbc_bodyPanel;
 
   private void initComponents() {
-    addTbMessageListener();
+    addMessageListeners();
   }
 
-  private void addTbMessageListener() {
+  private void addMessageListeners() {
   }
 
   public SamplerMainForm() {
@@ -47,7 +48,7 @@ public class SamplerMainForm extends JFrame {
 
     mainPanel = new JPanel();
     mainPanel.setBorder(
-        BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), null, TitledBorder.DEFAULT_JUSTIFICATION,
+        createTitledBorder(createLineBorder(Color.black), null, TitledBorder.DEFAULT_JUSTIFICATION,
             TitledBorder.DEFAULT_POSITION, null, null));
     mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
 
@@ -60,7 +61,7 @@ public class SamplerMainForm extends JFrame {
     messagePanel.setLayout(new GridBagLayout());
     messageTab.add(messagePanel, BorderLayout.CENTER);
     messagePanel.setBorder(
-        BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black), null, TitledBorder.DEFAULT_JUSTIFICATION,
+        createTitledBorder(createLineBorder(Color.black), null, TitledBorder.DEFAULT_JUSTIFICATION,
             TitledBorder.DEFAULT_POSITION, null, null));
     final JPanel headersPanel = new JPanel();
     headersPanel.setLayout(new BorderLayout(0, 0));
