@@ -1,4 +1,4 @@
-package ru.alxpro.jmeter.mqtester.sampler.form;
+package ru.alxpro.jmeter.mqtester.sampler;
 
 import static javax.swing.BorderFactory.createLineBorder;
 import static javax.swing.BorderFactory.createTitledBorder;
