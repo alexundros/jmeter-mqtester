@@ -56,6 +56,6 @@ public class SamplerGui extends AbstractSamplerGui {
   }
 
   @Override
-  public void modifyTestElement(TestElement testElement) {
+  public void modifyTestElement(TestElement te) {
   }
 }
