@@ -9,14 +9,14 @@ import org.apache.jmeter.threads.AbstractThreadGroup;
 import org.apache.jmeter.threads.JMeterContext;
 import org.apache.jmeter.threads.JMeterContextService;
 import org.apache.jmeter.threads.JMeterVariables;
-import org.apache.jorphan.logging.LoggingManager;
-import org.apache.log.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.alxpro.jmeter.mqtester.Constants;
 import ru.alxpro.jmeter.mqtester.Helper;
 
 public class Sampler extends AbstractSampler implements TestStateListener, Interruptible {
 
-  public static final Logger log = LoggingManager.getLoggerForClass();
+  private final Logger log = LoggerFactory.getLogger(getClass());
 
   private boolean initialized;
 
@@ -25,14 +25,14 @@ public class Sampler extends AbstractSampler implements TestStateListener, Inter
   }
 
   private void initialize(AbstractThreadGroup threadGroup) {
-    log.info(String.format(whoAmI() + ": Initialize"));
+    log.info("{}: Initialize", whoAmI());
   }
 
   private void doAction(SampleResult result) {
   }
 
   public Sampler() {
-    log.debug(String.format("%s: %s()", Helper.whoIs(this), NAME));
+    log.debug("{}: {}()", Helper.whoIs(this), NAME);
   }
 
   @Override
@@ -57,7 +57,7 @@ public class Sampler extends AbstractSampler implements TestStateListener, Inter
 
   @Override
   public void testStarted(String host) {
-    log.info(String.format(whoAmI() + ": Started (%s)", host));
+    log.info("{}: Started ({})", whoAmI(), host);
   }
 
   @Override
@@ -67,7 +67,7 @@ public class Sampler extends AbstractSampler implements TestStateListener, Inter
 
   @Override
   public void testEnded(String host) {
-    log.info(String.format(whoAmI() + ": Ended (%s)", host));
+    log.info("{}: Ended ({})", whoAmI(), host);
   }
 
   @Override
